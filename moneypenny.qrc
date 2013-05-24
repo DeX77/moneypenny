@@ -1,0 +1,30 @@
+<RCC>
+  <qresource>
+    <file>images/printer1.png</file>
+    <file>images/network-wireless.svg</file>
+    <file>images/accounts.xpm</file>
+    <file>images/nfs_unmount.png</file>
+    <file>images/exit.xpm</file>
+    <file>images/moenypenny.png</file>
+    <file>images/moneypenny2.png</file>
+    <file>images/transactions.xpm</file>
+    <file>images/back.xpm</file>
+    <file>images/floppy.xpm</file>
+    <file>images/transfer.xpm</file>
+    <file>images/connect_creating.png</file>
+    <file>images/forward.xpm</file>
+    <file>images/moneypenny.png</file>
+    <file>images/update.xpm</file>
+    <file>images/connect_established.png</file>
+    <file>images/guimain.png</file>
+    <file>images/moneypenny.xpm</file>
+    <file>images/usbpendrive.xpm</file>
+    <file>images/connect_no.png</file>
+    <file>images/help.xpm</file>
+    <file>images/pinpad_small.jpg</file>
+    <file>images/home.xpm</file>
+    <file>images/sendnow.xpm</file>
+    <file>images/dial_in.xpm</file>
+    <file>images/toolbox.xpm</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-15">
+	<TITLE>Emergency</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Linux)">
+	<META NAME="CREATED" CONTENT="20041213;16464000">
+	<META NAME="CHANGED" CONTENT="20051219;14350500">
+</HEAD>
+<BODY LANG="de-DE" DIR="LTR">
+<H1><FONT FACE="Arial, sans-serif">Hilfe im Notfall</FONT></H1>
+<H2>Fehlerhafte &Uuml;berweisungen</H2>
+<P><FONT FACE="Arial, sans-serif">Falls Sie ein &Uuml;berweisungsformular
+fehlerhaft ausgef&uuml;llt und bereits best&auml;tigt haben, l&ouml;schen
+Sie den betreffenden Eintrag in der Liste der zu sendenden Auftr&auml;ge.
+(Men&uuml;punkt Auftr&auml;ge / Anstehende Auftr&auml;ge)<BR>Sollten
+Sie den Auftrag schon an die Bank &uuml;bertragen haben, so k&ouml;nnen
+die Bankmitarbeiter den Auftrag normalerweise noch zur&uuml;ckrufen,
+bevor das Geld den Empf&auml;nger erreicht. Rufen Sie in diesem Falle
+sofort Ihre Bank an. </FONT>
+</P>
+<H2>Schl&uuml;sseldatei verloren, Passwort vergessen</H2>
+<P><FONT FACE="Arial, sans-serif">Ohne die privaten Schl&uuml;ssel
+ist es nicht m&ouml;glich, mit dem Bankrechner Kontakt aufzunehmen.
+Sie m&uuml;ssen in diesem Falle die HBCI Einrichtung wiederholen und
+einen neuen Schl&uuml;ssel einreichen. Erkundigen Sie sich bei Ihrer
+Bank, ob dort zuerst Ihr alter Schl&uuml;ssel gel&ouml;scht werden
+muss.<BR>Wenn Sie das Passwort f&uuml;r die HBCI Daten&uuml;bertragung
+vergessen haben, gilt das gleiche wie oben. Sie ben&ouml;tigen auch
+in diesem Falle eine neue Schl&uuml;sseldatei.<BR>Wenn Sie das
+Passwort f&uuml;r das erste Login von MoneyPenny vergessen haben,
+gen&uuml;gt es, alle Dateien bis auf die HBCI Schl&uuml;sseldatei mit
+der Endung .key auf dem USB-Stick oder der Diskette zu l&ouml;schen.
+Dabei gehen alle gespeicherten Daten verloren. Beim n&auml;chsten
+Start des Programms k&ouml;nnen Sie dann ein neues Passwort eingeben.
+F&uuml;hren Sie danach den Setup von MoneyPenny erneut aus und
+verwenden Sie den schon vorhandenen Schl&uuml;ssel (.key Datei) f&uuml;r
+die Daten&uuml;bertragung. Ihre Kontodaten k&ouml;nnen Sie
+anschlie&szlig;end mit &quot;Kontoums&auml;tze / Kontoums&auml;tze
+abholen&quot; erneut von der Bank &uuml;bertragen lassen. Allerdings
+werden auf dem Bankrechner meistens nur die Ums&auml;tze der letzten
+3 bis 4 Monate gespeichert, so dass &Auml;ltere Daten eventuell
+verloren sind. Selbstverst&auml;ndlich hat die Bank die alten Daten
+noch. Allerdings ist die Wiederbeschaffung normalerweise mit Aufwand
+und Kosten verbunden. </FONT>
+</P>
+<H2>Sicherheitsmedium gestohlen oder kopiert</H2>
+<P><FONT FACE="Arial, sans-serif">Rufen Sie in diesem Falle sofort
+Ihre Bank an und lassen Sie den gestohlenen Schl&uuml;ssel f&uuml;r
+den HBCI Zugang sperren. F&uuml;hren Sie dann den Setup von
+MoneyPenny vollst&auml;ndig neu durch. Dabei wird ein neuer Satz
+Schl&uuml;sseldateien erzeugt und zur Bank &uuml;bertragen. Sie
+m&uuml;ssen anschlie&szlig;end den neuen Ini-Brief bei Ihrer Bank zur
+Freischaltung des neuen Schl&uuml;ssels einreichen. </FONT>
+</P>
+<P><FONT FACE="Arial, sans-serif">Die Daten auf der Diskette oder dem
+USB Stick sind zwar so gut verschl&uuml;sselt, dass sie ohne die
+richtigen Passw&ouml;rter nicht entschl&uuml;sselt werden k&ouml;nnen,
+aber ein Passwort kann erraten oder durch Probieren gefunden werden.
+Dies sollte aber im Normalfalle mindestens einige Tage lang dauern.
+Zumindest gilt das dann, wenn Sie nicht ein leicht zu erratendes
+Passwort, wie zum Beispiel Ihren Namen mit Geburtsdatum verwendet
+haben. Die auf der Diskette vorhandene Datei zur Passwortkontrolle
+(pwmd.dat) enth&auml;lt nicht das Passwort, sondern die MD5
+Pr&uuml;fsumme, die es erlaubt, das erste Passwort zu pr&uuml;fen.
+Aus dieser Datei kann aber nicht r&uuml;ckw&auml;rts das Passwort
+erzeugt werden. </FONT>
+</P>
+<P><FONT FACE="Arial, sans-serif">Vorausgesetzt, Sie haben ein
+Passwort mit 8 Zeichen mit nur Kleinbuchstaben (24 m&ouml;gliche
+Zeichen) verwendet, dann gibt es 24 hoch 8 = 110 075 314 176 = 1.1E11
+M&ouml;glichkeiten f&uuml;r das Passwort. Wenn man annimmt, dass nach
+der H&auml;lfte der Versuche das Passwort gefunden wurde, so sind nur
+etwa 5.5E10 Versuche n&ouml;tig. Mein ziemlich aktueller Computer
+(AMD Athlon 2600, Baujahr2004) braucht daf&uuml;r bei optimaler
+Programmierung lediglich etwa 160000 Sekunden, also etwa 2 Tage. Erst
+wenn Sie auch Sonderzeichen, Ziffern und Gro&szlig;buchstaben
+verwenden, so dass etwa 128 m&ouml;gliche Zeichen im Passwort
+vorkommen k&ouml;nnen, steigt die Anzahl der zu pr&uuml;fenden
+Passw&ouml;rter auf etwa 7E16. Dies entspricht einer Ratedauer von
+200 000 Tagen entsprechend 550 Jahren, was im Normalfalle als sicher
+angesehen werden kann. Allerdings gilt dies nur unter der Annahme,
+dass das Passwort nicht erraten wird! Wenn das Passwort f&uuml;r die
+Entschl&uuml;sselung der Diskette erraten wurde, k&ouml;nnen Ihre
+Zugangsdaten zur Bank gelesen werden. Damit wissen Unbefugte
+allerdings immer noch nicht wesentlich mehr, als Ihre Kontonummer und
+Ihre Benutzernummer. Der Zugang zum Bankserver ist immer noch durch
+das zweite (und hoffentlich vom ersten Passwort verschiedenene)
+Passwort f&uuml;r den privaten HBCI Schl&uuml;ssel gesch&uuml;tzt.
+Erst wenn auch dieses Passwort erraten wird, k&ouml;nnen Unbefugte
+den Schl&uuml;ssel verwenden.<BR>Dagegen ist es ohne die auf der
+Diskette gespeicherten Schl&uuml;sseldateien praktisch unm&ouml;glich,
+die Daten zu entschl&uuml;sseln oder Kontakt mit dem Bankserver
+aufzunehmen. </FONT>
+</P>
+<H2>Computer gestohlen</H2>
+<P><FONT FACE="Arial, sans-serif">Wenn Sie die Diskette oder den
+USB-Stick noch haben, kann niemand an Ihre Bankdaten heran. Diese
+befinden sich ausschlie&szlig;lich auf der Diskette oder dem USB
+Stick und sind sicherheitshalber nochmals verschl&uuml;sselt. Wurde
+Die Diskette oder der USB Stick gestohlen oder eventuell kopiert,
+lassen Sie Ihren HBCI Zugang bei der Bank sperren. (siehe oben) </FONT>
+</P>
+<H2>Virus auf dem Computer</H2>
+<P><FONT FACE="Arial, sans-serif">Das ist &Auml;rgerlich, aber im
+Normalfalle kein Problem. MoneyPenny funktioniert trotzdem, da es
+sein eigenes Betriebssystem mitbringt. Achten Sie aber wie immer
+sorgf&auml;ltigst darauf, die Schl&uuml;sseldiskette bzw. den USB
+Stick nach Beendigung von MoneyPenny aus dem Computer zu entfernen.
+Da sich keinerlei Daten &uuml;ber den Bankverkehr auf der Festplatte
+Ihres Computers befinden, wenn Sie den USB Stick bzw. die Diskette
+entnommen haben,kann nichts passieren. <BR>Wenn Sie Windows neu
+installieren m&uuml;ssen, denken Sie diesmal vielleicht daran, einen
+Teil der Festplatte f&uuml;r ein virensicheres Betriebssystem (z.B.
+Linux)frei zulassen. </FONT>
+</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<COL WIDTH=85*>
+	<COL WIDTH=85*>
+	<COL WIDTH=85*>
+	<THEAD>
+		<TR VALIGN=TOP>
+			<TD WIDTH=33%>
+				<P><A HREF="index.html">zum Inhaltsverzeichnis</A></P>
+			</TD>
+			<TD WIDTH=33%>
+				<P><A HREF="index.html">zur vorhergehenden Seite</A></P>
+			</TD>
+			<TD WIDTH=33%>
+				<P><A HREF="requirements.html">zur n&auml;chsten Seite</A></P>
+			</TD>
+		</TR>
+	</THEAD>
+</TABLE>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

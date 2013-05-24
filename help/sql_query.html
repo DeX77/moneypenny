@@ -1,0 +1,514 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>SQL - Abfragen</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.3  (Linux)">
+	<META NAME="CREATED" CONTENT="20041213;16464000">
+	<META NAME="CHANGED" CONTENT="20050922;11345800">
+</HEAD>
+<BODY LANG="de-DE" DIR="LTR">
+<H1>Absetzen eigener SQL-Abfragen</H1>
+<P><BR><BR>
+</P>
+<P ALIGN=JUSTIFY>F&uuml;r den ge&uuml;bten Anwender wurde die
+M&ouml;glichkeit geschaffen eigene SQL-Abfragen abzusetzen und, falls
+gew&uuml;nscht, das Ergebnis abzuspeichern. Hierdurch sind sie in der
+Lage beispielsweise nur die Transaktionen eines bestimmten Kontos
+oder eines definierten Zeitraumes sich anzeigen zu lassen.</P>
+<P ALIGN=JUSTIFY>Um eine Anfrage abzusetzen klicken sie bitte auf den
+Button mit dem „Schraubenschl&uuml;ssel“ im Hauptfenster von
+MoneyPenny. Er befindet sich in der linken oberen Bildschirmh&auml;lfte
+links neben dem „Hilfe“-Button. In der nun angezeigten Liste
+klicken sie bitte den Button „Eigene SQL Query“ an. Auf der nun
+angezeigten Seite sehen sie eine vorbereitete, g&uuml;ltige SQL -
+Abfrage. Bitte beachten sie, dass nur SELECT - Anfragen g&uuml;ltig
+sind.</P>
+<P ALIGN=JUSTIFY>Alle manipulativen Abfragen sind aus
+sicherheitsrelevanten Gr&uuml;nden nicht m&ouml;glich und resultieren
+in einer Fehlermeldung. Ver&auml;ndern sie nun nach ihren Vorgaben
+die Abfrage und best&auml;tigen sie ihre Eingabe durch Anklicken des
+„Ausf&uuml;hren“ - Buttons. Sollte ihre Abfrage korrekt sein wird
+ihnen das Ergebnis in einer nicht editierbaren Tabelle angezeigt. F&uuml;r
+den Fall einer fehlerhaften Eingabe wird ihnen eine Fehlermeldung
+angezeigt. Dies ist m&ouml;glich sollten sie beispielsweise eine
+nicht existierende Tabelle abfragen oder einen Fehler in der Syntax
+gemacht haben.</P>
+<P ALIGN=JUSTIFY>Kontrollieren sie nun bitte ihre Eingabe durch
+anklicken des „zur&uuml;ck“ - Buttons und senden sie die
+korrigierte Anfrage erneut. F&uuml;r den Fall einer g&uuml;ltigen
+Abfrage k&ouml;nnen sie das angezeigte Ergebnis auch exportieren.
+Dies ist dann allerdings nur im CSV-Format m&ouml;glich. F&uuml;r
+weitergehende Hilfe bez&uuml;glich des Datenexports bem&uuml;hen sie
+bitte die zu diesem Thema erstellten Seiten.</P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<H1>&Uuml;bersicht existierender Tabellen und Spaltennamen</H1>
+<P><BR><BR>
+</P>
+<P ALIGN=JUSTIFY>Hier finden sie ein Aufstellung der existierenden
+Tabellen und deren Spaltennamen. Bitte beachten sie, dass
+Tabellennamen case – sensitive sind.</P>
+<P ALIGN=JUSTIFY>Tabelle Transactions</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=4>
+	<COL WIDTH=128*>
+	<COL WIDTH=128*>
+	<THEAD>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>transactionID</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>der Index und Prim&auml;rschl&uuml;ssel der Tabelle
+				Transactions</P>
+			</TD>
+		</TR>
+	</THEAD>
+	<TBODY>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>valutadate</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>das Datum der Gutschrift</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>transaction_date</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>das Datum der Tranaction</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>storedate</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>das Datum des Abholdatums von der Bank</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>transaction_value</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Betrag der Transaktion mit zwei Nachkommastellen</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>transaction_key</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Auftragsidentifikationsnummer</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>custref</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Kundenreferenz</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>transaction_text</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Text der &Uuml;berweisung (Verwendungszweck)</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>textkey</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>die vom Kreditinstitut unterst&uuml;tzten
+				Textschl&uuml;ssel (siehe HBCI-Spezifikation)</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>primanota</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>bankinterne Buchungsnummer</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>ourbankCode</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>eigene Bank ID</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>ouraccId</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>eigene Kontonummer</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>otherbankCode</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>fremde Bank ID</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>otheraccId</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>fremde Kontonummer</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>othername</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>fremder Kontoinhaber</P>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=JUSTIFY>Tabelle DatedTransfers</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=4>
+	<COL WIDTH=128*>
+	<COL WIDTH=128*>
+	<THEAD>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>transferID</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>der Index und Prim&auml;rschl&uuml;ssel der Tabelle
+				DatedTransfers</P>
+			</TD>
+		</TR>
+	</THEAD>
+	<TBODY>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>datedtransfer_date</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>das Datum des Transfers</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>datedtransfer_value</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Betrag des Transfers mit zwei Nachkommastellen</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>textkey</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>die vom Kreditinstitut unterst&uuml;tzten
+				Textschl&uuml;ssel (siehe HBCI-Spezifikation)</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>textkeyext</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>die extern unterst&uuml;tzten Textschl&uuml;ssel</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>ouraccId</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>eigene Kontonummer</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>ourbankCode</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>eigene Bank ID</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>ourcountry</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>eigener L&auml;nderschl&uuml;ssel</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>otheraccId</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>fremde Kontonummer</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>otherbankCode</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>fremde Bank ID</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>othercountry</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>fremder L&auml;nderschl&uuml;ssel</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>othername</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>fremder Kontoinhaber</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>purpose</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Verwendungszweck</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>jobid</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Auftragsnummer</P>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=JUSTIFY>Tabelle StandingOrders</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=4>
+	<COL WIDTH=128*>
+	<COL WIDTH=128*>
+	<THEAD>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>standingorderID</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>der Index und Prim&auml;rschl&uuml;ssel der Tabelle
+				StandingOrders</P>
+			</TD>
+		</TR>
+	</THEAD>
+	<TBODY>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>standingorder_date</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>das Datum des offenen Auftrags</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>standingorder_value</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>der Betrag des offenen Auftrags</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>start_date</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>das Erstausf&uuml;hrungsdatum</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>end_date</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>das Datum der letztmaligen Ausf&uuml;hrung</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>textkey</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>die vom Kreditinstitut unterst&uuml;tzten
+				Textschl&uuml;ssel (siehe HBCI-Spezifikation)</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>textkeyext</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>die extern unterst&uuml;tzten Textschl&uuml;ssel</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>ouraccId</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>eigene Kontonummer</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>ourbankCode</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>eigene Bank ID</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>ourcountry</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>eigener L&auml;nderschl&uuml;ssel</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>otheraccId</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>fremde Kontonummer</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>otherbankCode</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>fremde Bank ID</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>othercountry</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>fremder L&auml;nderschl&uuml;ssel</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>othername</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>fremder Kontoinhaber</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>purpose</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Verwendungszweck</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>jobid</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Auftragsnummer</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>unit</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Zeiteinheit(w&ouml;chentlich, monatlich)</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>turnus</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Turnus f&uuml;r Dauerauftr&auml;ge (siehe
+				HBCI-Spezifikation)</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>day</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Flag wird gesetzt bei t&auml;glicher
+				Ausf&uuml;hrung(siehe HBCI-Spezifikation)</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>yearly</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Flag wird gesetzt bei j&auml;hrlicher
+				Ausf&uuml;hrung(siehe HBCI-Spezifikation)</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>weekly</P>
+			</TD>
+			<TD WIDTH=50%>
+				<P ALIGN=LEFT>Flag wird gesetzt bei w&ouml;chentlicher
+				Ausf&uuml;hrung(siehe HBCI-Spezifikation)</P>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=4>
+	<COL WIDTH=85*>
+	<COL WIDTH=85*>
+	<COL WIDTH=85*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=33%>
+			<P><A HREF="index.html">zum Inhaltsverzeichnis</A></P>
+		</TD>
+		<TD WIDTH=33%>
+			<P><A HREF="dataexport.html">zur vorhergehenden Seite</A></P>
+		</TD>
+		<TD WIDTH=33%>
+			<P><A HREF="linux-operating.html">zur n&auml;chsten Seite</A></P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,129 @@
+  Deutscher Text siehe Datei INSTALLATION
+
+How to install MoneyPenny
+=========================
+Sorry, but this is neither easy nor straightforward, because
+you need plenty of libraries in their right versions and configure options. The Linux kernel
+should be 2.6.5-7.155  or later for cardreader support to work properly.
+Especially libchipcard and the cardreader drivers are quite tricky 
+to install, according to your type of cardreader. With a Reiner SCT Cyberjack you are lucky, 
+because it is detected automatically. Plug it in, install libchipcard and be happy.
+Stick to the following procedure.
+You need the following libraries: 
+If they do already come with a ready to go configure script, skip the "make -f Makefile.cvs" commands.
+
+
+1. openssl 0.9.7(inklusive Entwicklerpakte openssl-devel)http://www.openssl.org
+2. gwenhywfar 1.19.1                                    http://gwenhywfar.sourceforge.net
+3. openhbci2.1.9.3                                      http://www.openhbci.de
+4. aqmoney2.1.9.3                                       http://aqmoney.sourceforge.net
+5. pcsc-lite-1.2.9-beta8                                http://pcsclite.alioth.debian.org
+6. opensc 0.9.6                                         http://www.opensc.org
+7. libchipcard2-1.9.15beta                              http://www.libchipcard.de 
+8. openhbci-plugin-ddvcard2 from the openhbci2-1.9.2 package (the plugin is missing in openhbci2.1.9.3 )
+9. ccid-0.9.4
+
+Install the packages in this order. Do this using rpmbuild, whenever possible. Calling ./configure, 
+make and make install may mess up your system due to errors in required prefixes (most packages require prefix=/usr). 
+Please refer to the library installation script on our server.
+Libchipcard pcsc-lite, openhbci-plugin-ddvcard2 and opensc are needed, if you need a chipcard-reader.
+However, you might prefer to use rpm. All packages (not pcsc-lite) come with a .spec file, so that
+you can build rpm packages using:
+ rpmbuild -ta PACKAGE_TAR_BALL_NAME
+Install these packages using rpm or YaST. This is much better than installing "the hard way" using
+make install.
+
+ Prior to configuring libchipcard, you should install the driver for your cardreader.
+ Simply copy the driver to: /usr/lib/chipcard2-server/lowlevel
+
+ ************Installation of the ddvcard2 plugin****************************
+ If you want to use rpmbuild:
+  Edit the openhbci-plugin-ddvcard2.spec file. Change the dependencies from libchipcard-XXX to libchipcard2-XXX
+ 
+ cd into openhbci2-1.9.2/plugins/openhbci-plugin-ddvcard2 
+   
+  then run:
+  
+ make -f Makefile.cvs 
+ ./configure 
+ make
+ sudo make install
+ 
+ *******************Setup libchipcard******************
+ There is a setup manual available at www.libchipcard.de.
+ Setup the configuration of libchipcard for your reader.
+ Special instructions from the manufacturer may be required!
+ Rename or copy the file
+ /etc/chipcard2-client/chipcardc2.conf.example to /etc/chipcard2-client/chipcardc2.conf
+ 
+ Rename or copy the file
+ /etc/chipcard2-server/chipcardd2.conf.minimal to /etc/chipcard2-server/chipcardd2.conf
+  
+ make directory /var/log/chipcard2
+ 
+ Plug in your reader. If you have an USB reader, libchipcard should find it automatically
+ when you start the chipcardd2 daemon.
+
+ ************Install your chipcard driver (ctapi based readers)***************
+ 
+ The driver file (.so file)is simply copied to /usr/lib/chipcard2-server/lowlevel.
+ Example: Installing a Kobil Kaan Standard plus serial reader
+ 
+ download the driver bundle from www.kobil.de
+ copy libct.so to /usr/lib/chipcard2-server/lowlevel
+
+ run
+ chipcardd2 addreader --list 
+ 
+  
+ The Kobil driver needs a configuration file named .CT_devices in your home directory.
+ If you start the chipcardd2 daemon as root, the home directory is /root. 
+ If you let MoneyPenny start the daemon with a sudo command, the home directory is YOUR
+ homedirectory. In the latter case, the logfile for the chipcardd2 daemon is /var/log/chipcardd2.log.
+ If the daemon is complaining about wrong ports, something is wrong with .CT_devices.
+ 
+ This is my .CT_devices file for the Kobil Kaan Standard Plus:
+ 
+GetPortType=#0
+SetPortType=#0
+DefaultPortType=#0
+DefaultProtocollType=#0
+UseOnlyDefaultProtocoll=#0
+B1DTRLow=#50
+B1DSRRespActive=#2000
+PnPChar=#150
+B1WaitForPnPString=#1500
+KaanWaitForPnPString=#600
+Port1=COM;/dev/ttyS0;2;0;serial reader at /dev/ttyS0: Kaan/SecOVID/TWIN
+Port2=PCSC;KOBIL KAAN Advanced 00 00;3;0;PCSC Leser
+UseOldStyleManufacturerDataObje=#0
+LogfileName=/home/walter/ct_api.log
+LogLevel=#15
+UseOldStyleManufacturerDataObject=#0
+
+*******Installing a PCSC based Reader (like the Kobil Kaan Advanced)****************************
+Sorry, this does not yet work correctly. 
+
+
+ 
+****************Install MoneyPenny***************************** 
+  
+MoneyPenny itself is a KDevelop 3.1 based qmake project. You may install it using KDevelop or simply use the script make_release in this directory. It will call qmake to create the makefiles and then compile and clean the project. The executable program is called moneypenny and resides in the bin directory. 
+If you want the program to run from another directory, copy the MoneyPenny directory including all it's subdirectories to that location. If you prefer a standard installation to /usr/bin run the make_install script or:
+./configure
+make
+sudo make PREFIX=/usr install
+However, it may make sense to use the RPM package manager. You can create an rpm-packkage from the 
+pristine source tarball with the command:
+rpmbuild -ta moneypennnyXXX.tar.gz
+where XXX is the version number.
+Presently the strings are available in English and German. However, the help is German only.
+If you would like to join our team with a translation to your native language, please send a mail to 
+moneypenny@www-in.fh-swf.de
+
+
+Enjoy!
+Your MoneyPenny Team
+
+
+ 

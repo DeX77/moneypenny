@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Verschluesselung</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.1  (Linux)">
+	<META NAME="CREATED" CONTENT="20041213;16464000">
+	<META NAME="CHANGED" CONTENT="20050320;19291000">
+</HEAD>
+<BODY LANG="de-DE" DIR="LTR">
+<H1>Was ist asymmetrische Verschl&uuml;sselung?</H1>
+<P><BR><BR>
+</P>
+<P>Dieses Verschl&uuml;sselungsverfahren wurde von Diffie, Hellman
+und Merkle (Ver&ouml;ffentlichung im Sommer 1975) entwickelt und
+arbeitet mit dem so genannten asymmetrischen Schl&uuml;ssel. Das in
+MoneyPenny (und HBCI) verwendete RSA Verfahren beruht auf Arbeiten
+von Rivet, Shamir und Adleman (IEEE Transactions on Information
+Theory, IT-22, 6, p.644, November 1976). Es beruht auf der
+mathematischen Unl&ouml;sbarkeit des diskreten Logarithmusproblems
+und gilt bei ausreichender Schl&uuml;ssell&auml;nge als das sicherste
+bekannte kryptopgraphische Verfahren.<BR>Bei RSA wird zur
+Verschl&uuml;sselung (Chiffrieren) ein v&ouml;llig anderer Schl&uuml;ssel
+als zur Entschl&uuml;sselung (Dechiffrieren) verwendet. Der gro&szlig;e
+Vorteil ist, dass der Chiffrier-Schl&uuml;ssel &ouml;ffentlich
+bekannt gemacht werden kann. Jeder kann mit diesem Schl&uuml;ssel
+verschl&uuml;sselte Nachrichten an den Eigent&uuml;mer des
+zugeh&ouml;rigen privaten und geheimen Dechiffrierschl&uuml;ssels
+schicken, die nur mit dem privaten Schl&uuml;ssel des Eigent&uuml;mers
+dechiffriert werden k&ouml;nnen. 
+</P>
+<P>Symmetrische Verschl&uuml;sselungsverfahren arbeiten im Gegensatz
+dazu mit einem einzigen geheimen symmetrischen Schl&uuml;ssel, d.h.
+die Entschl&uuml;sselung ist die Umkehrung der Verschl&uuml;sselung.
+Bei dem asymmetrischen Verfahren unterscheiden sich die beiden
+Schl&uuml;ssel, wie es der Name ausdr&uuml;ckt, d.h.
+Verschl&uuml;sselungs- und Entschl&uuml;sselungsschl&uuml;ssel
+unterscheiden sich voneinander. 
+</P>
+<P>Das bedeutet, wenn eine Person eine Botschaft verschl&uuml;sselt,
+kann sie nur noch mit dem passenden Dechiffrier-Schl&uuml;ssel Zugang
+zur Botschaft erlangen. Beim asymmertischen Verfahren wird der
+Dechiffrier-Schl&uuml;ssel geheim gehalten, daher auch die
+Bezeichnung privater Schl&uuml;ssel (private key), w&auml;hrend der
+Chiffrier-Schl&uuml;ssel (public Key) &ouml;ffentlich bekannt gemacht
+wird. 
+</P>
+<P>Falls nun Person A an Person B eine Mitteilung schicken m&ouml;chte,
+muss Person A den Text mit dem Chiffrier-Schl&uuml;ssel von Person B
+verschl&uuml;sseln. Dieser Schl&uuml;ssel kann pers&ouml;nlich
+&uuml;bergeben werden oder &ouml;ffentlich zug&auml;nglich abgelegt
+sein (zum Beispiel auf einem Schl&uuml;ssel-Server). Danach kann die
+Mitteilung versendet werden und nur noch von Person B mit dem
+passenden Dechiffrier-Schl&uuml;ssel entschl&uuml;sselt werden. Der
+gro&szlig;e Vorteil bei diesem Verfahren ist, dass kein sicherer
+Austausch der Schl&uuml;sselinformationen erfolgen muss, d.h. die
+Schl&uuml;sselvereinbarung und -verteilung entf&auml;llt. 
+</P>
+<P>Der &ouml;ffentliche Schl&uuml;ssel kann f&uuml;r alle Menschen
+bereitgestellt werden, dabei ist es aber nur dem Besitzer des
+Dechiffrier-Schl&uuml;ssels m&ouml;glich, die Botschaften zu
+entschl&uuml;sseln, alle anderen Schl&uuml;ssel sind nicht in der
+Lage dazu. Dadurch wird das Kernproblem bei der symmetrischen
+Verschl&uuml;sselung umgangen, der sichere Transport des Schl&uuml;ssels.
+</P>
+<P>F&uuml;r  weitere Information besuchen Sie die Seiten Einf&uuml;hrung
+in Pretty Good Privacy oder PGPI oder die Internetseiten der Firma
+RSA-Security. Siehe auch die Literaturhinweise unter <A HREF="security.html">Sicherheit</A>.
+</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<COL WIDTH=85*>
+	<COL WIDTH=85*>
+	<COL WIDTH=85*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=33%>
+			<P><A HREF="index.html">zum Inhaltsverzeichnis</A></P>
+		</TD>
+		<TD WIDTH=33%>
+			<P><A HREF="hbcifints.html">zur vorhergehenden Seite</A></P>
+		</TD>
+		<TD WIDTH=33%>
+			<P><A HREF="glossary.html">zur n&auml;chsten Seite</A></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,4 @@
+#! /bin/bash
+
+# Start moneypenny from /opt
+/opt/moneypenny/bin/moneypenny > $HOME/moneypenny.log 2>&1 &

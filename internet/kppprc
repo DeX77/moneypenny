@@ -1,0 +1,59 @@
+[Account0]
+AccountingEnabled=0
+AccountingFile=
+Authentication=1
+AutoDNS=1
+AutoName=0
+BeforeConnect=
+BeforeDisconnect=
+CallbackPhone=
+CallbackType=0
+Command=
+DNS=
+DefaultRoute=1
+DisconnectCommand=
+Domain=
+ExDNSDisabled=0
+Gateway=0.0.0.0
+IPAddr=0.0.0.0
+Name=Arcor Internet by Call
+Password=internet
+Phonenumber=0192075
+ScriptArguments=
+ScriptCommands=
+StorePassword=1
+SubnetMask=0.0.0.0
+Username=arcor-ibc
+VolumeAccountingEnabled=0
+pppdArguments=
+
+[General]
+DefaultAccount=Arcor Internet by Call
+DefaultModem=Modem an COM1
+NumberOfAccounts=1
+NumberOfModems=1
+PPPDebug=0
+ShowLogWindow=1
+
+[Graph]
+Background=255,255,255
+Enabled=true
+InBytes=0,0,255
+OutBytes=255,0,0
+Text=0,0,0
+
+[Modem0]
+BusyWait=0
+Device=/dev/ttyS0
+Enter=CR
+FlowControl=Hardware [CRTSCTS]
+Name=Modem an COM1
+Speed=460800
+Timeout=60
+UseLockFile=1
+Volume=1
+WaitForDialTone=0
+
+[WindowPosition]
+WindowPositionConWinX=481
+WindowPositionConWinY=478

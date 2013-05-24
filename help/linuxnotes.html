@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Linuxbetrieb</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.1  (Linux)">
+	<META NAME="CREATED" CONTENT="20041213;16464000">
+	<META NAME="CHANGED" CONTENT="20050811;19372500">
+</HEAD>
+<BODY LANG="de-DE" DIR="LTR">
+<H1>Betrieb unter Linux</H1>
+<P><BR><BR>
+</P>
+<P>Die Hilfe bezieht sich vorrangig auf den Betrieb von MoneyPenny
+mit der ausgelieferten Live-CD. Die folgenden Hinweise sind f&uuml;r
+den erfahrenen Linux User gedacht. 
+</P>
+<P>Sie haben auch die M&ouml;glichkeit, falls Sie auf ihrem Rechner
+ein Linux System installiert haben, MoneyPenny auf diesem System
+zu installieren und auszuf&uuml;hren. 
+</P>
+<P><B>Diese Betriebsart wird nicht empfohlen, da sie Einschnitte in
+die Sicherheitsphilosophie des Programms mit sich bringt.</B> Die
+Anwenderdaten werden in diesem Falle <b>unverschl&uuml;sselt</b> im
+Homeverzeichnis (~/moneypenny_data) auf der Festplatte abgelegt, solange
+MoneyPenny l&auml;uft. Bei Beendigung des Programms werden diese Daten 
+lediglich durch ein einfaches rm gel&ouml;scht.
+Sperren Sie deshalb unbedingt alle unn&ouml;tigen Ports. Lassen Sie weder
+einen Browser noch einen Webserver parallel zu MoneyPenny laufen.
+<B>Arbeiten Sie nicht als root.</B> 
+</P>
+<P>Auch Linux ist nicht v&ouml;llig immun gegen Spionage- und
+Sabotage-Programme. Achten Sie auf jeden Fall auf einen aktuellen
+Stand Ihrer sicherheitsrelevanten Updates. <b>Die h&ouml;chstm&ouml;gliche
+Sicherheit wird aber nur durch den Betrieb von der nicht
+beschreibbaren CD unter Verwendung einer kabelgebundenen Tastatur und
+Maus gew&auml;hrleistet.</b> In dieser Betriebsart ist MoneyPenny das 
+sicherste derzeit verf&uuml;gbare Electronic-Banking System. 
+</P>
+<H2>Installation</H2>
+<P>Die Installation ist wegen der Vielzahl der verwendeten
+Bibliotheken nicht ganz einfach. Lesen Sie bitte dazu auch die Datei
+INSTALL im Hauptverzeichnis von MoneyPenny. Installieren Sie in der
+angegebenen Reihenfolge. Sie ben&ouml;tigen den g++, die
+Entwicklerversion der Qt 3.3 Bibliothek von www.trolltech.no. und
+OpenSSL von Sourceforge.net. Diese sind meist in ihrer Distribution
+enthalten. Sie m&uuml;ssen aber auf jeden Fall die zugeh&ouml;rigen
+Developer-Pakete installieren. Die Projektverwaltung von MoneyPenny
+basiert auf qmake. Ferner
+ben&ouml;tigen Sie die OpenHBCI-Bibliotheken als Sources.
+</P>
+<P>Sie erhalten diese von unserem Webserver unter http://www-in.fh-swf.de/moneypenny.
+Diese Bibliotheken sind gepatched, um eine einwandfreie Funktion sicherzustellen. 
+</P>
+<P>Nach dem Entpacken und Installieren der Bibliotheken entpacken Sie die MoneyPenny
+Quelltexte aus dem Archiv moneypenny.tar.gz und installieren das Programm 
+mit folgendem Kommandos: <br>
+<UL>
+  <LI>tar -xzf moneypenny.tar.gz
+  <LI>cd moneypenny
+  <LI>su
+  <LI>./make_install 
+</UL>
+Das Skript make_install konfiguriert, kompiliert und installiert das Programm und
+r&auml;umt anschlie&szlig;end auf. MoneyPenny wird nach /usr/bin installiert,
+die zugeh&ouml;rigen Dateien nach /usr/share/moneypenny. Sie starten MoneyPenny
+in diesem Falle mit dem Kommando:<br>
+moneypenny
+<P>Alternativ k&ouml;nnen Sie moneypenny.kdevelop mit KDevelop &gt;
+3.2 laden und kompilieren. Eventuell m&uuml;ssen Sie die Dateipfade
+in der Datei src/globals.h auf Ihre Erfordernisse anpassen. Das
+ausf&uuml;hrbare Programm hei&szlig;t moneypenny und befindet sich
+nach dem Kompilieren im Verzeichnis moneypenny/bin. Es sollte nicht unbedingt
+in das normale /usr/bin Verzeichnis verlagert werden. Damit wird
+erreicht, dass nur der registrierte Benutzer Zugriff auf MoneyPenny
+hat. Sie starten moneypenny in diesem Falle mit:
+/home/Ihr_User_Name/moneypenny/bin/moneypenny 
+</P>
+<H2>Sicherheitshinweise</H2>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm">Arbeiten Sie niemals als root user
+	mit MoneyPenny. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm">Speichern Sie die HBCI Schl&uuml;ssel
+	niemals auf der Festplatte. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm">Sperren Sie alle nicht ben&ouml;tigten
+	Ports. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm">Lassen Sie keinesfalls einen
+	Webserver oder Browser parallel zu MoneyPenny laufen. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm">Benutzen Sie keine Funktastatur. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm">Arbeiten Sie nicht auf einem
+	entfernten X-Server &uuml;ber Netzwerk. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm">Moneypenny legt die Daten in
+	w&auml;hrend des Betriebs im Verzeichnis ~/moneypenny_data ab.
+	Dieses Verzeichnis wird gel&ouml;scht, wenn MoneyPenny beendet wird.
+	Dies geschieht lediglich mit einem einfachen rm Kommando. Das
+	bedeutet, dass Unbefugte die Daten eventuell wiederherstellen
+	k&ouml;nnen. Bei Verwendung der Live-CD ist dies unm&ouml;glich.</P>
+	<LI><P STYLE="margin-bottom: 0cm">Es k&ouml;nnen sich
+	unverschl&uuml;sselte Daten auf Ihrer swap-Partition befinden. 
+	</P>
+	<LI><P>Wenn auf dem gleichen Rechner Windows l&auml;uft, w&uuml;nschen
+	wir Ihnen viel Gl&uuml;ck. Entnehmen  Sie in diesem Fall unbedingt
+	die Diskette oder den USB Stick, bevor Windows das Regiment
+	&uuml;bernimmt. 
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<COL WIDTH=85*>
+	<COL WIDTH=85*>
+	<COL WIDTH=85*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=33%>
+			<P><A HREF="index.html">zum Inhaltsverzeichnis</A></P>
+		</TD>
+		<TD WIDTH=33%>
+			<P><A HREF="turnovers.html">zur vorhergehenden Seite</A></P>
+		</TD>
+		<TD WIDTH=33%>
+			<P><A HREF="datatransfer.html">zur n&auml;chsten Seite</A></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>
