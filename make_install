@@ -1,9 +1,0 @@
-#! /bin/bash
-
-# Script for building a release version of MoneyPenny and installing to /opt
-
-rm Makefile
-qmake  "CONFIG+=release" moneypenny.pro
-make -j4
-make INSTALL_ROOT=/opt install
-#make clean
